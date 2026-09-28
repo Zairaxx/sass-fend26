@@ -1,0 +1,15 @@
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
+
+.main-content {
+
+    div {
+        background: #e21d86;
+
+        p {
+            font-size: 20px;
+            color: $main-color;
+            background: #e21d86;
+        }
+    }
+}
