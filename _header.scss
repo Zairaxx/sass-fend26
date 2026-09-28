@@ -15,21 +15,40 @@ header {
         border: 2px solid $main-color;
         height: 100px;
         padding: 5px;
+        background:purple;
+        //Alternativ 1 - Media query med variabel
+
+        @media (max-width:$small){
+            background:purple;
+        }
+
+        //Alternativ 2 - Media query med mixin
+        @include tablet {
+            background: orange;
+        }
+
+        @include desktop {
+            background: green;
+        }
     }
 
     .register-btn {
         @include btn;
-
         color:white;
-        background:black;
-        border:none;
+
+        &:hover {
+            background:#333;
+
+        }
+
     }
 
     .login-btn {
-        @include btn;
-        
-        background:$secondary-color;
-        border:1px solid black;
+        @include btn(blue,1px solid white);
+
+        &:hover {
+            background:white;
+        }
     }
     
 }

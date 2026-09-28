@@ -1,5 +1,21 @@
-@mixin btn {
+@use "variables.scss" as *;
+
+@mixin btn ($backgroundColor:peachpuff, $border:2px solid black){
+    background: $backgroundColor;
+    border: $border;
     border-radius: 6px;
     padding:4px 8px;
     margin:4px 8px;
+}
+
+@mixin tablet {
+    @media (min-width: $small) and (max-width:$medium){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $medium){
+        @content;
+    }
 }
